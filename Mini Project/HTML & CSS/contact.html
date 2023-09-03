@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+</head>
+<style>
+    .inner-banner-section h2 {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: 55px;
+        color: #fff;
+        font-weight: 700;
+        opacity: 1;
+        margin: 0;
+        box-sizing: border-box;
+        padding-top: 205px;
+        text-shadow: 3px 3px 30px #000;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        float: left;
+        text-align: center;
+        color: #ea232a;
+        font-family: 'PT Serif', serif;
+        font-size: 30px;
+        margin-bottom: 5px;
+        margin-top: 25px;
+    }
+
+    p {
+        text-align: center;
+        padding: 0 90px;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-input {
+        width: 385px;
+        border-bottom: solid 2px #ccc;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        height: 40px;
+        outline: none;
+        resize: none;
+        display: inline-block;
+        margin: 0 35px;
+        margin-bottom: 35px;
+    }
+
+    .form-section-wrap .button {
+        margin: 0 auto;
+        display: block;
+        float: none;
+        margin-top: 35px;
+    }
+
+    .button {
+        width: 125px;
+        float: left;
+        width: 140px;
+        margin: 0;
+        background: #ea232a;
+        height: 38px;
+        border-radius: 37px;
+        line-height: 37px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+        box-shadow: 2px 2px 15px rgb(0 0 0 / 22%);
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
+
+    button {
+        border: none;
+        background: none;
+    }
+
+    .address-section {
+        margin-top: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-sect {
+        float: none;
+        width: 345px;
+        display: inline-block;
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    .address-section {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-font-smoothing: antialiased;
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: 400;
+        color: #2f2f2f;
+        font-family: 'Open Sans', sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-sect p span {
+        float: left;
+        width: 100%;
+        font-family: 'PT Serif', serif;
+        font-size: 22px;
+        color: #ea232a;
+        margin-bottom: 10px;
+    }
+
+    .add-sect p {
+        padding: 0;
+        vertical-align: top;
+        float: left;
+        width: 100%;
+    }
+
+    .contact-details p {
+        text-align: center;
+        padding: 0 90px;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div class="row  inner-banner-section">
+        <img src="contact-banner.jpg" alt="MIET">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="wrapper">
+
+        <h1>Get in touch</h1>
+        <p>If you have query regarding the college, admission procedure, campus life, placement, entrance test, fee
+            structure, number of departments and scholarships, you can contact us on the following address. You can drop
+            a mail or call us. We will be happy to assist you in best possible way.</p>
+
+        <br clear="all">
+        <div class="form-section-wrap">
+            <h3 id="error" class="validations"></h3>
+
+            <form action="../landing-page/contactinsert.php" method="POST" onsubmit="return validatecontact();"
+                enctype="multipart/form-data">
+                <input class="contact-input" type="text" name="name" id="name" placeholder="Your Name">
+                <input class="contact-input" type="text" name="phone" id="phone" placeholder="Your Phone no."
+                    maxlength="10">
+                <input class="contact-input" type="email" name="email" id="email" placeholder="Your Email">
+                <input class="contact-input" type="text" name="message" id="message" placeholder="Your Message">
+                <br clear="all">
+                <div class="g-recaptcha" data-sitekey="6Lc8OdMZAAAAAMaHjkdeJ7xrvhxP9eZFrJM89iZ_">
+                    <div style="width: 304px; height: 78px;">
+                        <div><iframe title="reCAPTCHA"
+                                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lc8OdMZAAAAAMaHjkdeJ7xrvhxP9eZFrJM89iZ_&amp;co=aHR0cHM6Ly93d3cubWlldC5hYy5pbjo0NDM.&amp;hl=en-GB&amp;v=jF-AgDWy8ih0GfLx4Semh9UK&amp;size=normal&amp;cb=efoosocds8l2"
+                                width="304" height="78" role="presentation" name="a-seu6uey65b8u" frameborder="0"
+                                scrolling="no"
+                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                        </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                            class="g-recaptcha-response"
+                            style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                    </div><iframe style="display: none;"></iframe>
+                </div>
+                <button type="button" id="submit-button" name="submit" class="button">Submit</button>
+            </form>
+
+        </div>
+        <div class="address-section">
+
+            <div class="add-sect">
+                <p><span>Address</span>
+                    N.H. 58, Delhi-Roorkee
+                    Highway, Baghpat
+                    Road Bypass Crossing
+                    Meerut - 250005. UP (India)</p>
+            </div>
+
+            <div class="add-sect">
+                <p><span>Email</span>
+                    contact@miet.ac.in</p>
+            </div>
+
+            <div class="add-sect">
+                <p><span>Phone No.</span> 0121-2439019/2439057</p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

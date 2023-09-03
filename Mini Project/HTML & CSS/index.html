@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIET College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        #img1 {
+            top: 37rem;
+            width: 92rem;
+            height: 45rem;
+        }
+
+        .nav-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(43, 39, 39);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 16px;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #ea232a;
+        }
+
+        ul li ul {
+            background: rgb(43, 39, 39);
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            list-style: none;
+            left: 82px;
+            display: none;
+        }
+
+        .dropdown_menu {
+            background: rgb(43, 39, 39);
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            list-style: none;
+            left: 506px;
+            display: none;
+        }
+
+        .dropdown_menu_1 {
+            background: rgb(43, 39, 39);
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            list-style: none;
+            left: 620px;
+            display: none;
+        }
+
+        ul li:hover>ul,
+        ul li:focus-within>ul,
+        ul li ul:hover,
+        ul li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            width: 300px;
+            padding-left: 50px;
+
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 80%;
+        }
+
+        .miet-association-section h3 {
+            font-size: 50px;
+            font-weight: 100;
+            text-transform: uppercase;
+            height: 40px;
+            line-height: 45px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 35px;
+            font-family: Impact;
+        }
+
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nbs-flexisel-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .nbs-flexisel-item {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer;
+            position: relative;
+            list-style: none;
+            line-height: 0px;
+        }
+
+        .miet-association-section {
+            width: 100%;
+            height: auto;
+            background: #f7f7f7;
+            float: left;
+            margin: 0;
+        }
+
+        .padd-top {
+            padding-top: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #3e3e46;
+        }
+
+        .mapouter {
+            position: relative;
+            text-align: right;
+            width: 100%;
+            height: 432px;
+            top: 2rem;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            width: 100%;
+            height: 432px;
+        }
+
+        .gmap_iframe {
+            height: 432px !important;
+        }
+
+        .footer span {
+            font-size: 18px;
+            color: #ea232a;
+        }
+
+        .widget p span {
+            font-size: 23px;
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+
+        .footer {
+            width: 100%;
+            height: auto;
+            float: left;
+            padding-left: 100px;
+            background: #111010;
+            margin: 0;
+            padding: 40px 0;
+            padding-left: 95px;
+            border-top: solid 175px #ea232a;
+            box-shadow: 1px 1px 30px rgb(0 0 0 / 58%);
+        }
+
+        .widget p {
+            color: #fff;
+            font-size: 13px;
+            line-height: 20px;
+            padding-left: 20px;
+            letter-spacing: 0;
+        }
+
+        .widget {
+            width: 240px;
+            height: auto;
+            min-height: 246px;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .widget ul li a {
+            width: 100%;
+            font-size: 14px;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 400;
+            float: left;
+            padding-top: 10px;
+            padding-left: 16px;
+            padding-bottom: 15px;
+            padding-right: 16px;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+        }
+
+        .widget ul {
+            float: right;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-left: 25px;
+        }
+
+        .widget ul li {
+            width: 92%;
+            margin: 0;
+            padding: 0;
+            float: right;
+
+        }
+
+        .footer1 {
+            background-color: #ea232a;
+            color: white;
+            text-align: center;
+            font-weight: var(--font-semi);
+            padding: 1rem 0;
+        }
+
+        .search {
+            float: right;
+            color: white;
+            padding: 18px 75px;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 3px 17px;
+        }
+        .search-icon {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+        .search-icon i{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-ul">
+                <li>
+                    <a href="index.html" style="text-decoration: none"><strong>HOME</strong></a>
+                </li>
+                <li>
+                    <a href="program.html" style="text-decoration: none" target="_blank"><strong>PROGRAMS</strong></a>
+                    <ul>
+                        <li><a href="https://www.miet.ac.in/btech" target="_blank">B.Tech</a></li>
+                        <li><a href="https://www.miet.ac.in/pharmacy" target="_blank">B.Pharm</a></li>
+                        <li><a href="https://www.miet.ac.in/applied-science-engineering" target="_blank">Applied
+                                Science Engineering</a></li>
+                        <li><a href="http://mietedu.com/" target="_blank">B.Ed</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">B.Sc. Biotechnology</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">B.Sc. Microbiology</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">M.Sc. Biotechnology</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">M.Sc. Microbiology</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">M.Tech</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">M.Pharm</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">M.C.A.</a></li>
+                        <li><a href="http://mietedu.ac.in/" target="_blank">MBA</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="achievement.html" style="text-decoration: none"
+                        target="_blank"><strong>ACHIEVEMENTS</strong></a>
+                </li>
+                <li>
+                    <a href="contact.html" style="text-decoration: none" target="_blank"><strong>CONTACT US</strong></a>
+                </li>
+                <li>
+                    <a href="helpline.html" style="text-decoration: none" target="_blank"><strong>HELPLINE</strong></a>
+                    <ul id="mietul1" class="dropdown_menu">
+                        <li id="mietli1"><a href="#" id="gg" style="font-weight:600;border:0px;">Admission:
+                                9927-439-439</a></li>
+                        <li id="mietli1"><a href="#" id="gg" style="font-weight:600;border:0px;">HELPLINE NO - 99171
+                                03999 </a></li>
+                    </ul>
+                </li>
+                </li>
+                <li>
+                    <a href="facility.html" style="text-decoration: none"
+                        target="_blank"><strong>FACILITIES</strong></a>
+                    <ul class="dropdown_menu_1">
+                        <li><a href="https://www.miet.ac.in/transport" target="_blank"> Transport</a></li>
+                        <li><a href="https://www.miet.ac.in/hostel" target="_blank"> Hostel</a></li>
+                        <li><a href="https://www.miet.ac.in/medical" target="_blank"> Medical</a></li>
+                        <li><a href="https://www.miet.ac.in/other-facility" target="_blank"> Other Facility</a></li>
+                        <li><a href="https://www.miet.ac.in/faculty-residence-guest-house" target="_blank"> Faculty
+                                Residence &amp; Guest House</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="nba.html" style="text-decoration: none" target="_blank"><strong>NBA</strong></a>
+                </li>
+                <li>
+                    <a href="login.html" style="text-decoration: none" target="_blank"><strong>LOGIN</strong></a>
+                </li>
+                <div class="search search-icon">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <img src="img2.png" id="img1" />
+    </div>
+    <div class="row section miet-association-section">
+        <div class="wrapper">
+
+            <h3>Our Associations </h3>
+
+            <div class="nbs-flexisel-container">
+                <div class="nbs-flexisel-inner">
+                    <ul id="flexiselDemo3" class="nbs-flexisel-ul" style="display: flow-root; left: -216px;">
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/as-2.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/as-1.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/as-5.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/as-6.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/as-7.png"></li>
+                    </ul>
+                </div>
+                <div class="nbs-flexisel-nav-left" style="visibility: visible; top: 22px;"></div>
+                <div class="nbs-flexisel-nav-right" style="visibility: visible; top: 22px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row section miet-association-section padd-top">
+        <div class="wrapper">
+            <h3>Our Student's Startups </h3>
+            <div class="nbs-flexisel-container">
+                <div class="nbs-flexisel-inner">
+                    <ul id="flexiselDemo6" class="nbs-flexisel-ul" style="left: -216px;">
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/Central_Park_Logo1.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/beydest_pvt.ltd--white_1.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/mBeat_Logo1.jpg"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/mic-tech-logo1.PNG"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/myshikshak-logo1.PNG"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/student.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/student1.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/student2.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/student3.png"></li>
+                        <li class="nbs-flexisel-item" style="width: 216px;"><img
+                                src="https://miet.ac.in/assets/frontend/images/Central_Park_Logo1.png"></li>
+                    </ul>
+                </div>
+                <div class="nbs-flexisel-nav-left" style="visibility: visible; top: 26.5px;"></div>
+                <div class="nbs-flexisel-nav-right" style="visibility: visible; top: 26.5px;"></div>
+            </div>
+
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                    marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?width=691&amp;height=432&amp;hl=en&amp;q=MIET meerut&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                    href="https://piratebay-proxys.com/">Piratebay</a></div>
+        </div>
+        <div>
+            </p>
+            <div class="footer">
+                <div class="widget" style="border-right:0px;">
+                    <p>
+                        <span><span>Meerut Institute of Engineering and Technology</span></span> <b> Address </b> NH-58,
+                        Baghpat
+                        Road,<br />
+                        UP (India)<br />
+                        <b>Phone</b> : 91 121 2439019, 2439057<br />
+                        <b>Fax</b> : 0121-2439058<br />
+                        <b>Email</b> :contact@miet.ac.in
+                    </p>
+                </div>
+                <div class="widget">
+                    <ul>
+                        <li>
+                            <a href="https://miet.ac.in/proctorial-board" target="_blank">Proctorial Board</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/industrial-interface" target="_blank">Industrial Interface</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/Academic Calendar Odd Sem-2022-23-Master calendar.pdf"
+                                target="_blank">Academic Calendar</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/transport" target="_blank">Transport</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/hostel" target="_blank">Hostel &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/Mandatory Disclosure 2022-23 (1).pdf" target="_blank">Mandatory
+                                Disclosure</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/criteria-i" target="_blank">NAAC</a>
+                        </li>
+                        <li>
+                            <a href="aicte-feedback" target="_blank">AICTE Feedback </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <ul>
+                        <li>
+                            <a href="/miet/assets/files/SC ST Grievance Redressal Committee.pdf"
+                                target="_blank">Committee
+                                for
+                                SC ST</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/Document 30.pdf" target="_blank">Institute-Industry Cell</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.edugrievance.com/" target="_blank">Ragging and Grievance Redressal</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/code of cunduct.pdf" target="_blank">Code of Conduct -
+                                Student/Faculty/staff</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/operating-procedures" target="_blank">Operating Procedures</a>
+                        </li>
+                        <li>
+                            <a href="https://miet.ac.in/central-library" target="_blank">Central Library</a>
+                        </li>
+                        <li>
+                            <a href="https://forms.gle/uXDjv6hs9yG46FHn7" target="_blank">Feedback and Grievance </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <ul>
+                        <li>
+                            <a href="assets/Satarkta Committee.pdf" target="_blank">Satarkta Committee</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/Women_cell_ICC.pdf" target="_blank">Women Cell ICC</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/6_AntiRagging_Flying_Squad_2022-23_Notice (1).pdf"
+                                target="_blank">Anti
+                                Ragging Squad</a>
+                        </li>
+                        <li>
+                            <a href="/miet/assets/files/6_AntiRagging_Flying_Squad_2022-23_Notice(1).pdf"
+                                target="_blank">Anti
+                                Ragging Committee &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="assets/uploads/Decleration Under Section 4(1)(b) of RTI 2005.pdf"
+                                target="_blank">Declaration Under Section 4(1)(b) of RTI 2005</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="widget">
+                    &nbsp;</div>
+
+            </div>
+            <p>
+                &nbsp;</p>
+
+        </div>
+        <footer class="footer1">
+
+            <p>© 2022 copyright all right reserved</p>
+        </footer>
+
+</body>
+
+</html>
